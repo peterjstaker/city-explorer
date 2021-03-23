@@ -3,7 +3,7 @@
 Deployed at: [https://cityexplorer.netlify.app/](https://cityexplorer.netlify.app/)
 
 **Author**: Peter Staker
-**Version**: 1.0.3
+**Version**: 1.0.4
 
 ## Overview
 
@@ -40,6 +40,7 @@ Data Flow Diagram created with [Jessi Velasquez](https://github.com/JessiVelazqu
 ## Change Log
 
 03-22-2021 6:51pm - Application now fully-functional, with styling and updated README.
+03-23-2021 3:43pm - Recieves weather data from backend API.
 
 ## Credit and Collaborations
 
