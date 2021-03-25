@@ -6,6 +6,7 @@ import axios from 'axios';
 import ErrorMessage from './Error.js';
 import Weather from './weather.js'
 import Row from 'react-bootstrap/Row';
+import Movie from './movie.js';
 
 class App extends React.Component {
   constructor(props){
@@ -18,7 +19,9 @@ class App extends React.Component {
       hasError: false,
       errorMessage: '',
       displayWeather: false,
-      weatherArr: []
+      weatherArr: [],
+      movieArr: [],
+      displayMovies: false,
     }
   }
 
@@ -28,12 +31,15 @@ class App extends React.Component {
       const url =`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_KEY}&q=${this.state.searchQuery}&format=json`;
       const location = await axios.get(url);
       const locationArray = location.data;
-      const SERVER = 'http://localhost:3001';
-   // const SERVER = 'https://city-explorer-backend-api.herokuapp.com';
-      const weather = await axios.get(`${SERVER}/weather/${locationArray[0].lat}/${locationArray[0].lon}`);
-      console.log(weather);
+      // const SERVER = 'http://localhost:3001';
+      const SERVER = process.env.SERVER;
+      const weather = await axios.get(`${SERVER}/weather`, { params: {lat: locationArray[0].lat, lon: locationArray[0].lon}});
+      // const weather = await axios.get(`${SERVER}/weather`)
       const weatherArr = weather.data;
       console.log(weatherArr);
+      const movies = await axios.get(`${SERVER}/movies`, { params: {city: this.state.searchQuery}});
+      const movieArr = movies.data;
+      console.log(movieArr);
       this.setState({
         location: locationArray[0],
         displayResults: true,
@@ -41,7 +47,9 @@ class App extends React.Component {
         hasError: false,
         errorMessage: '',
         displayWeather: true,
-        weatherArr: weatherArr
+        weatherArr: weatherArr,
+        movieArr: movieArr,
+        displayMovies: true
       });      
     } catch(err) {
       console.log(err.message);
@@ -49,7 +57,8 @@ class App extends React.Component {
         displayResults: false,
         hasError: true,
         errorMessage : err.message,
-        displayWeather: false
+        displayWeather: false,
+        displayMovies: false
       })
     }
   }
@@ -92,6 +101,22 @@ class App extends React.Component {
               index={index}
               date={forecastObj.date}
               description={forecastObj.description}
+            />
+          ))
+        }
+        </Row>
+        <Row className="w-75 p3 mx-auto">
+        {this.state.displayMovies &&
+          this.state.movieArr.map((movieObj, index) => (
+            movieObj.poster_path &&
+            <Movie 
+              key={index}
+              index={index}
+              release_date={movieObj.release_date}
+              overview={movieObj.overview}
+              title={movieObj.title}
+              rating={movieObj.rating}
+              poster_path={movieObj.poster_path}
             />
           ))
         }
