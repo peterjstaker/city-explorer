@@ -3,7 +3,7 @@
 Deployed at: [https://cityexplorer.netlify.app/](https://cityexplorer.netlify.app/)
 
 **Author**: Peter Staker
-**Version**: 1.0.4
+**Version**: 1.0.5
 
 ## Overview
 
@@ -21,7 +21,7 @@ In order to run this application on your own machine:
 
 1. Create a .env file in root directory and add the following:
 
-> REACT_APP_LOCATION_KEY=<\access token goes here>
+> REACT_APP_LOCATION_KEY=access token goes here
 
 1. In your terminal, enter:
 
@@ -35,22 +35,28 @@ Created using React.JS, axios and location.io API.
 
 Data Flow Diagram created with [Jessi Velasquez](https://github.com/JessiVelazquez):
 
-![DFD](src/dataflow.png)
+![DFD](src/assets/dataflow.png)
 
 Web Request Response Cycle Diagram created with [Simone Odegaard](https://github.com/SimoneOdegard):
 
-![WRRC](src/WRRC.png)
+![WRRC](src/assets/WRRC.png)
+
+Web Request Response Cycle Diagram made with [Jacob Holmer](https://github.com/Pratibhaprogrammer):
+
+![WRRC](src/assets/requestResponseCycle.png)
 
 ## Change Log
 
 03-22-2021 6:51pm - Application now fully-functional, with styling and updated README.
 03-23-2021 3:43pm - Recieves weather data from backend API.
 03-25-2021 7:33pm - Recieve movie and weather data from backend API.
+03-26-2021 2:23pm - Refactored and extracted components.
 
 ## Credit and Collaborations
 
 Data Flow Diagram created with [Jessi Velasquez](https://github.com/JessiVelazquez)
 Web Request Response Cycle Diagram created with [Simone Odegaard](https://github.com/SimoneOdegard)
+Web Request Response Cycle Diagram made with [Jacob Holmer](https://github.com/Pratibhaprogrammer)
 
 ## Time Estimates
 
@@ -111,3 +117,15 @@ Start time: 1pm
 Finish time: 2:30pm
 
 Actual time needed to complete: 1.5 hours
+
+***
+
+Name of feature: Refactoring
+
+Estimate of time needed to complete: 2 hour
+
+Start time: 12pm
+
+Finish time: 2:18pm
+
+Actual time needed to complete: 2.3 hours

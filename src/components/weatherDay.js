@@ -2,11 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
-class Weather extends React.Component {
+class WeatherDay extends React.Component {
 
     render() {
         return(
-            <Card className="mx-auto mb-5" style={{ width: '10rem' }} bg="dark" text="light">
+          <Card className="mx-auto mb-5" style={{ width: '10rem' }} bg="dark" text="light">
             <Card.Body>
               <Card.Title>{this.props.date}</Card.Title>
               <Card.Text>
@@ -18,4 +18,4 @@ class Weather extends React.Component {
 
 }
 
-export default Weather;
+export default WeatherDay;
