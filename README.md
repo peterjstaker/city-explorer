@@ -99,3 +99,15 @@ Start time: 5pm
 Finish time: 6:30pm
 
 Actual time needed to complete: 1.5 hours
+
+***
+
+Name of feature: Movie API
+
+Estimate of time needed to complete: 2 hour
+
+Start time: 1pm
+
+Finish time: 2:30pm
+
+Actual time needed to complete: 1.5 hours
