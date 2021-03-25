@@ -37,14 +37,20 @@ Data Flow Diagram created with [Jessi Velasquez](https://github.com/JessiVelazqu
 
 ![DFD](src/dataflow.png)
 
+Web Request Response Cycle Diagram created with [Simone Odegaard](https://github.com/SimoneOdegard):
+
+![WRRC](src/WRRC.png)
+
 ## Change Log
 
 03-22-2021 6:51pm - Application now fully-functional, with styling and updated README.
 03-23-2021 3:43pm - Recieves weather data from backend API.
+03-25-2021 7:33pm - Recieve movie and weather data from backend API.
 
 ## Credit and Collaborations
 
 Data Flow Diagram created with [Jessi Velasquez](https://github.com/JessiVelazquez)
+Web Request Response Cycle Diagram created with [Simone Odegaard](https://github.com/SimoneOdegard)
 
 ## Time Estimates
 
